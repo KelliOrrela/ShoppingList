@@ -1,0 +1,183 @@
+/*
+http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 250%;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html, body {
+	height: 100%;
+}
+
+
+/*main styles*/
+
+body {
+	background: url("Petey.jpg");
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: black;
+	font-family: 'Kite One', Georgia, sans-serif;
+	font-size: 16px;
+	padding: 2em 0 28em 0;
+	width: 100%;
+}
+
+/*app title font*/
+h1 {
+	color: white;
+	font-family: 'Gabriela', Verdana, serif;
+	font-size: 5em;
+	word-spacing: 2px;
+}
+
+/*list font*/
+h2 {
+	font-size: 2em;
+}
+
+/*removed font*/
+h3 {
+	font-size: 1.5em;
+}
+
+input[type=button] {
+	cursor: pointer;
+}
+
+.apptitle {
+	margin-top: 1.5em;
+	text-align: center;
+}
+
+.listfields {
+	margin: 0 auto;
+	padding: 4em 0 8em 0;
+	width: 75%;
+}
+
+.newitemfields {
+	padding: 1.5em 0;
+}
+
+#newitem { 
+	background-color: white;
+	border: 2px inset gainsboro;
+	color: black;
+	display: inline-block;
+	float: left;
+	font-family: 'Kite One', Georgia, sans-serif;
+	font-size: 1.75em;
+	opacity: .9;
+	padding: .25em 0 .2em 15px;
+	width: 75%;
+}
+
+::-webkit-input-placeholder {
+	color: dimgray;
+	font-weight: bold;
+	padding-left: 30px;
+}
+
+textarea:focus, input:focus {
+	outline: dimgray;
+}
+
+.newlistbutton {
+	background-color: gray;
+	border: none;
+	border-radius: 18px;
+	color: gainsboro;
+	display: inline-block;
+	float: left;
+	font-family: 'Kite One', Georgia, sans-serif;
+	font-size: .75em;
+	font-weight: bold;
+	letter-spacing: 1px;
+	margin: .65em 0 0 40px;
+	padding: 15px 18px 12px 18px;
+	text-align: center;
+}
+
+.list {
+	background-color: white;
+	display: block;
+	line-height: 350%;
+	margin-top: 6em;
+	opacity: .75;
+	padding: 1em 45px 2em 45px;
+}
+
+.iconsleft {
+	color: lightgray;
+	display: inline-block;
+	float: left;
+}
+.iconsright {
+	color: lightgray;
+	display: inline-block;
+	float: right;
+}
+
+.listitems {
+	padding-left: 60px;
+}
+
+.removedlist {
+	background-color: dimgray;
+	color: maroon;
+	display: block;
+	line-height: 250%;
+	margin-top: 6em;
+	opacity: .75;
+	padding: 1.5em 45px;
+}
+
+.removedlistitems {
+	padding-left: 60px;
+}
