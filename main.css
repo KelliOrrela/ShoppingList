@@ -63,7 +63,7 @@ body {
 	background-size: cover;
 	color: black;
 	font-family: 'Kite One', Georgia, sans-serif;
-	font-size: 16px;
+	font-size: 22px;
 	padding: 2em 0 28em 0;
 	width: 100%;
 }
@@ -139,7 +139,7 @@ textarea:focus, input:focus {
 	font-size: .75em;
 	font-weight: bold;
 	letter-spacing: 1px;
-	margin: .65em 0 0 40px;
+	margin: 1em 0 0 20px;
 	padding: 15px 18px 12px 18px;
 	text-align: center;
 }
