@@ -51,6 +51,7 @@ table {
 
 html, body {
 	height: 100%;
+	width: 100%;
 }
 
 
@@ -62,28 +63,21 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;
 	color: black;
-	font-family: 'Kite One', Georgia, sans-serif;
-	font-size: 22px;
-	padding: 2em 0 28em 0;
-	width: 100%;
+	font-family: 'Kite One', Verdana, sans-serif;
+	font-size: 18px;
+	padding: 2em 0 42em 0;
 }
 
 /*app title font*/
 h1 {
 	color: white;
-	font-family: 'Gabriela', Verdana, serif;
-	font-size: 5em;
+	font-family: 'Gabriela', Georgia, serif;
+	font-size: 6.854em;
 	word-spacing: 2px;
 }
 
-/*list font*/
-h2 {
-	font-size: 2em;
-}
-
-/*removed font*/
-h3 {
-	font-size: 1.5em;
+li {
+	font-size: 2.618em;
 }
 
 input[type=button] {
@@ -96,88 +90,60 @@ input[type=button] {
 }
 
 .listfields {
-	margin: 0 auto;
-	padding: 4em 0 8em 0;
-	width: 75%;
-}
-
-.newitemfields {
-	padding: 1.5em 0;
+	margin: 6em auto 8em auto;
+	width: 50%;
 }
 
 #newitem { 
 	background-color: white;
 	border: 2px inset gainsboro;
 	color: black;
-	display: inline-block;
-	float: left;
-	font-family: 'Kite One', Georgia, sans-serif;
-	font-size: 1.75em;
+	display: block;
+	font-family: 'Kite One', Verdana, sans-serif;
+	font-size: 2.618em;
+	margin: 0 auto;
 	opacity: .9;
-	padding: .25em 0 .2em 15px;
-	width: 75%;
+	padding: .25em 15px .25em 60px;
+	width: 50%;
 }
 
 ::-webkit-input-placeholder {
-	color: dimgray;
-	font-weight: bold;
-	padding-left: 30px;
+	color: gray;
 }
 
 textarea:focus, input:focus {
 	outline: dimgray;
 }
 
-.newlistbutton {
-	background-color: gray;
-	border: none;
-	border-radius: 18px;
-	color: gainsboro;
-	display: inline-block;
-	float: left;
-	font-family: 'Kite One', Georgia, sans-serif;
-	font-size: .75em;
-	font-weight: bold;
-	letter-spacing: 1px;
-	margin: 1em 0 0 20px;
-	padding: 15px 18px 12px 18px;
-	text-align: center;
-}
-
-.list {
+.addedlistcontainer {
 	background-color: white;
 	display: block;
-	line-height: 350%;
-	margin-top: 6em;
+	line-height: 400%;
+	margin-top: 4em;
 	opacity: .75;
-	padding: 1em 45px 2em 45px;
+	padding: 2em 75px;
 }
 
-.iconsleft {
-	color: lightgray;
-	display: inline-block;
-	float: left;
-}
-.iconsright {
-	color: lightgray;
-	display: inline-block;
-	float: right;
+.addedlist {
+	padding-left: 75px;
 }
 
-.listitems {
-	padding-left: 60px;
+.strikethrough {
+	text-decoration: line-through;
+	color: darkgreen;
+}
+
+.removedlistcontainer {
+	background-color: gray;
+	color: maroon;
+	display: block;
+	font-size: 75%;
+	line-height: 400%;
+	margin-top: 3em;
+	opacity: .75;
+	padding: 1.5em 75px;
 }
 
 .removedlist {
-	background-color: dimgray;
-	color: maroon;
-	display: block;
-	line-height: 250%;
-	margin-top: 6em;
-	opacity: .75;
-	padding: 1.5em 45px;
-}
-
-.removedlistitems {
-	padding-left: 60px;
+	padding-left: 75px;
 }
