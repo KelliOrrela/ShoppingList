@@ -20,14 +20,26 @@ function addItem() {
 }
 
 //Strike through added item
-$(".addedlist").delegate("li", "click", function(e) {
+$(".addedlist").on("click", "li", function(e) {
   $(this).addClass("strikethrough");
 });
 
-//Delete removed item
-$(".removedlist li").click(function() {
-  $(this).remove();
+//Move added item to removed item list
+$(".addedlist").on("dblclick", "li", function(e) {
+  $(this).removeClass("strikethrough").appendTo(".removedlist");
 });
+
+//Delete removed item
+$(".removedlist").on("dblclick", "li", function(e) {
+  $(this).fadeOut("slow");
+});
+
+//Added items sortable
+$(".addedlist").sortable();
+
+//Removed items draggable back to added items list
+$( ".addedlist ul" ).droppable();
+$( ".removedlist li" ).draggable({ connectToSortable: ".addedlist" });
 
 
 });
