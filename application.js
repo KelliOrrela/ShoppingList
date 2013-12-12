@@ -20,7 +20,7 @@ function addItem() {
 }
 
 //Strike through added item
-$(".addedlist li").click(function() {
+$(".addedlist li").on("click", function(e) {
   $(this).addClass("strikethrough");
 });
 
