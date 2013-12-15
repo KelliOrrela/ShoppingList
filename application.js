@@ -3,7 +3,8 @@ $(document).ready(function() {
 
 var item;
 
-//Input with enter key
+
+//Input item with enter key
 $("#newitem").keyup(function(e) {
   if (e.which == 13) {
     e.preventDefault();
@@ -11,35 +12,37 @@ $("#newitem").keyup(function(e) {
   }
 });
 
+//Put cursor focus on input field
+$("#newitem").focus();
+
 //Add item
 function addItem() {
   var item = document.getElementById("newitem").value;
-  $(".addedlist").append("<li>" + item + "</li>");
+  $(".list").append("<li><input type='button' class='checkitem' value='&#x2713;'/>" + item + "<input type='button' class='removeitem' value='&#x2715;'/><span id='sortitems'>&#8597;</span></li>");
+  //Reset placeholder text and return focus to input field
   $("#newitem").val("");
   $("#newitem").focus();
 }
 
-//Strike through added item
-$(".addedlist").on("click", "li", function(e) {
-  $(this).addClass("strikethrough");
+//Strike through item when checked
+$(".list").on("click", ".checkitem", function(e) {
+  $(this).closest("li").toggleClass("strikethroughtext");
+  $("#newitem").focus();
 });
 
-//Move added item to removed item list
-$(".addedlist").on("dblclick", "li", function(e) {
-  $(this).removeClass("strikethrough").appendTo(".removedlist");
+//Remove item
+$(".list").on("click", ".removeitem", function(e) {
+  $(this).parent().css("color", "indianred").fadeOut(800);
+  $("#newitem").focus();
 });
 
-//Delete removed item
-$(".removedlist").on("dblclick", "li", function(e) {
-  $(this).fadeOut("slow");
-});
-
-//Added items sortable
-$(".addedlist").sortable();
-
-//Removed items draggable back to added items list
-$( ".addedlist ul" ).droppable();
-$( ".removedlist li" ).draggable({ connectToSortable: ".addedlist" });
+//Make list items sortable
+$(".list").sortable({axis: "y", containment: ".list", revert: true, scroll: true, scrollspeed: 40, tolerance: "pointer",
+  //Control width of item when being sorted
+  start: function(event, ui) {
+  $(ui.item).width($(".listcontainer").width());
+  $("#newitem").focus();
+  }});
 
 
 });
