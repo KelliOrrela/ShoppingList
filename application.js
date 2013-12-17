@@ -18,10 +18,15 @@ $("#newitem").focus();
 //Add item
 function addItem() {
   var item = document.getElementById("newitem").value;
+  if (item == "" ||  item == " ") {
+    return(false);
+  }
+  else {
   $(".list").append("<li><input type='button' class='checkitem' value='&#x2713;'/>" + item + "<input type='button' class='removeitem' value='&#x2715;'/><span id='sortitems'>&#8597;</span></li>");
   //Reset placeholder text and return focus to input field
   $("#newitem").val("");
   $("#newitem").focus();
+  }
 }
 
 //Strike through item when checked
