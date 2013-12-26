@@ -5,9 +5,6 @@
 <meta charset="utf-8">
 
 <link rel="stylesheet" type="text/css" href="main.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-<script src="application.js" type="text/javascript"></script>
 
 <link rel="shortcut icon" href="http://faviconist.com/icons/cd881f67453072670346f83f43afbed0/favicon.ico" />
 
@@ -23,21 +20,18 @@
 	<body>
 
 
-
-		<div class="apptitle">
-			<h1>SHOPPING LIST</h1>
+		<h1>SHOPPING LIST</h1>
+		
+		<div class="instructionsandinput">
+			<h2>Type a new item & press &#x21a9;Enter</h2>
+			<h3>I'm begging ya', doggone it!</h3>
+			<input type="text" name="newitem" id="newitem" placeholder="" autocomplete="off" autofocus />	
 		</div>
 
-		<div class="instructions">
-			<h2>Type a new item & press <span style = "font-size: 1.25em">&#x21a9;<span></h2>
-		</div>
-
-		<input type="text" name="newitem" id="newitem" placeholder="I'm begging ya', doggone it!" autocomplete="off" autofocus />	
 		
 		<ul class="list">
 			<li></li>
 		</ul>
-			
 
 
 	</body>
@@ -46,3 +40,8 @@
 
 
 </html>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="application.js" type="text/javascript"></script>
